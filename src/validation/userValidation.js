@@ -34,5 +34,6 @@ exports.postForgotPasswordValidation =  {
     body: Joi.object({
         password: Joi.string().min(4).max(10).required(),
         confirmPassword: Joi.string().min(4).max(10).required(),
+        // confirmPassword: Joi.ref('password')
       }),
 }
