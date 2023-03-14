@@ -16,7 +16,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-});
+},{timestamps:true,versionKey:false});
 
 userSchema.pre('save',async function(next){
     this.password =  await hash(this.password,10)
